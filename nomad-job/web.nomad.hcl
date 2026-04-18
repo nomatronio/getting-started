@@ -7,10 +7,10 @@ variable "image_tag" {
 variable "port" {
   type        = number
   description = "Port to expose for the service."
-  default     = 8080
+  default     = UPDATE
 }
 
-job "getting-started-app" {
+job "getting-started-web" {
   datacenters = ["dc1"]
   type        = "service"
 
