@@ -25,8 +25,8 @@ job "metrics-pipeline" {
       }
 
       resources {
-        cpu    = 25
-        memory = 32
+        cpu    = 1
+        memory = 10
       }
     }
   }

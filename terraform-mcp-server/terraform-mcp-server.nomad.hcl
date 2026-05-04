@@ -1,4 +1,4 @@
-job "mcp-server" {
+job "terraform-mcp-server" {
   datacenters = ["dc1"]
   type        = "service"
 
@@ -20,13 +20,13 @@ job "mcp-server" {
       }
 
       env {
-        NAME    = "mcp-server"
-        MESSAGE = "mcp-server response"
+        NAME    = "vault-mcp-server"
+        MESSAGE = "vault-mcp-server response"
       }
 
       resources {
-        cpu    = 25
-        memory = 32
+        cpu    = 1
+        memory = 10
       }
     }
   }

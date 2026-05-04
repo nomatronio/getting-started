@@ -25,8 +25,8 @@ job "vector-index" {
       }
 
       resources {
-        cpu    = 25
-        memory = 32
+        cpu    = 1
+        memory = 10
       }
     }
   }

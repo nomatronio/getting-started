@@ -1,4 +1,4 @@
-job "eval-runner" {
+job "vault-mcp-server" {
   datacenters = ["dc1"]
   type        = "service"
 
@@ -20,8 +20,8 @@ job "eval-runner" {
       }
 
       env {
-        NAME    = "eval-runner"
-        MESSAGE = "eval-runner response"
+        NAME    = "vault-mcp-server"
+        MESSAGE = "vault-mcp-server response"
       }
 
       resources {
