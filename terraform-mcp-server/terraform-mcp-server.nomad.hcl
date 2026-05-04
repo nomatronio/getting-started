@@ -1,4 +1,4 @@
-job "getting-started-template-app" {
+job "terraform-mcp-server" {
   datacenters = ["dc1"]
   type        = "service"
 
@@ -7,8 +7,7 @@ job "getting-started-template-app" {
 
     network {
       port "http" {
-        static = NOMATRON_VAR_app_port
-        to     = 80
+        to = 9090
       }
     }
 
@@ -16,13 +15,18 @@ job "getting-started-template-app" {
       driver = "docker"
 
       config {
-        image = "${ NOMATRON_VAR_app_image }"
+        image = "nicholasjackson/fake-service:latest"
         ports = ["http"]
       }
 
+      env {
+        NAME    = "vault-mcp-server"
+        MESSAGE = "vault-mcp-server response"
+      }
+
       resources {
-        cpu    = 100
-        memory = 128
+        cpu    = 1
+        memory = 10
       }
     }
   }
