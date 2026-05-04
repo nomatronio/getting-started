@@ -10,7 +10,15 @@ Use it as a template in your own GitHub account or GitHub organization:
 
 ## What's inside
 
-- `nomad-job/`: a plain Nomad job with `image_tag` and `port` variables
-- `nomatron-template-job/`: a Nomatron template job using the same two variables
+- `admin-console/`: admin console service
+- `agent-orchestrator/`: agent coordination service
+- `embedding-service/`: embedding generation service
+- `eval-runner/`: AI evaluation runner service
+- `mcp-server/`: MCP server service
+- `metrics-pipeline/`: metrics processing service
+- `model-gateway/`: model routing service
+- `paymemts-api/`: payments API service
+- `vector-index/`: vector search index service
+- `worker-fleet/`: worker service fleet
 
-Keep this repo as your clean starting point, then adapt it for your own app.
+Each service deploys a small `nicholasjackson/fake-service` container through Nomad.
