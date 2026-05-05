@@ -15,7 +15,7 @@ job "agent-orchestrator" {
       driver = "docker"
 
       config {
-        image = "nicholasjackson/fake-service:latest"
+        image = "nicholasjackson/fake-service:vm-v0.26.2"
         ports = ["http"]
       }
 
