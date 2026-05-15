@@ -25,8 +25,8 @@ job "embedding-service" {
       }
 
       resources {
-        cpu    = 1
-        memory = 10
+        cpu    = 100
+        memory = 128
       }
     }
   }
