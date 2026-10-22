@@ -1,4 +1,4 @@
-job "paymemts-api" {
+job "web" {
   datacenters = ["dc1"]
   type        = "service"
 
@@ -20,13 +20,13 @@ job "paymemts-api" {
       }
 
       env {
-        NAME    = "paymemts-api"
-        MESSAGE = "paymemts-api response"
+        NAME    = "web"
+        MESSAGE = "hello from web"
       }
 
       resources {
-        cpu    = 1
-        memory = 10
+        cpu    = 200
+        memory = 128
       }
     }
   }
