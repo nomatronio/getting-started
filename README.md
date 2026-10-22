@@ -1,5 +1,7 @@
 # Nomatron Getting Started Template
 
+Nomatron is the operational control plane for Nomad. It does not replace Nomad. [nomatron.io](https://nomatron.io)
+
 Use this repository as a GitHub template for the Nomatron educational videos.
 
 1. Click **Use this template**.
@@ -46,6 +48,8 @@ Create environment `dev` before any plan.
 
 ## 4. Start dev mode
 
+Video: 04 — Start dev mode
+
 From a clone of this template:
 
 ```bash
@@ -70,6 +74,8 @@ Stop on the **Log In** page.
 
 ## 5. Sign in and create the organization
 
+Video: 05 — Sign in and create the first organization
+
 1. Sign in with username `root` and password `nomatron123`. Click **Log In**.
 2. If **Welcome to this Nomatron server** appears, click **Skip Guided Setup**.
 3. If **No Organizations Yet** appears, click **Create Organization**. Otherwise open **Organizations** and click **New Organization**.
@@ -79,6 +85,8 @@ Stop on the **Log In** page.
 7. On **Organization Created**, click **Go to Org**.
 
 ## 6. Connect the cluster
+
+Video: 06 — Connect the first Nomad cluster
 
 `nomad agent -dev` is still running.
 
@@ -96,6 +104,8 @@ The cluster summary shows the address `http://127.0.0.1:4646` and **ACL Token Co
 
 ## 7. Create the repository from this template
 
+Video: 07 — Create the repository
+
 In GitHub, on this template repository:
 
 1. Click **Use this template**.
@@ -111,6 +121,8 @@ The Nomatron organization `acme` and the GitHub owner of `demo-service` are sepa
 From this point, work in the `demo-service` copy. Leave the template clone as the directory where dev mode was started.
 
 ## 8. Create and connect a GitHub App
+
+Video: 08 — Connect a GitHub App
 
 Keep the dev-mode process from video 4 running. A restart assigns a new ngrok URL. Callback, setup, and webhook URLs must then be updated to that new `api_addr` before GitHub can reach Nomatron.
 
@@ -151,6 +163,8 @@ Click **Install**. In GitHub, install the app on the `demo-service` repository. 
 If you must restart dev mode later in this session, edit the GitHub App and replace the callback URL, setup URL, and webhook URL with the new `api_addr` paths above. Keep one ngrok session through video 12 so those URLs stay valid.
 
 ## 9. Create the app, environment, and job
+
+Video: 09 — Create the app, environment, and job
 
 Create the environment before any plan.
 
@@ -200,6 +214,8 @@ Job settings show jobspec type `NOMAD` and source `nomad/web.nomad.hcl`.
 
 ## 10. Add the approval policy
 
+Video: 10 — Add an approval policy
+
 The approval policy belongs to the app.
 
 1. On app `demo-service`, open the **Approval Policy** tab.
@@ -212,6 +228,8 @@ The approval policy belongs to the app.
 The page shows the saved policy version. `root` can approve the plan in video 12.
 
 ## 11. Push a change and wait for the plan
+
+Video: 11 — Push a change and review the plan
 
 Clone the `demo-service` copy. Do this work in that copy.
 
@@ -235,6 +253,8 @@ Open app `demo-service`, job `web`. Wait until **Review Latest Approvable Plan**
 Stop there. Do not approve the plan.
 
 ## 12. Approve, apply, and verify
+
+Video: 12 — Approve, apply, and verify in Nomad
 
 1. Open the plan run for job `web`.
 2. Click **Approve Plan**.
